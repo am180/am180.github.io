@@ -58,7 +58,7 @@
 
 				// Money Calculation
 				money = 3.4 * days;
-				money = money.toFixed(2);
+				money = (3.2 * days)+(.13 * hours)+(.002 * minutes);
 
 				var formatted = days+" Days, "+hours+" Hours, "+minutes+" Minutes, "+seconds+" Seconds"+"   $"+money+" Saved";	
 				document.getElementById("clock").innerHTML = formatted;
