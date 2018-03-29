@@ -102,6 +102,9 @@
 	box-shadow: 5px 10px #888888;
 	font-family: Roboto;
 }
+#clockContent {
+	text-align: center;
+}
 
 
 /* Rules for all grid items */
