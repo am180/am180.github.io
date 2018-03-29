@@ -62,21 +62,25 @@
 		</div>
 		<div id="clock" class="grid-item">
 			<script type="text/javascript">
+				// Quit Smoking Counters
 				var start = new Date("March 25, 2018, 11:00:00");
 				var today = new Date();
 				total = today - start;
+
+				// Division happening here
 				days = Math.floor(total / 86400000);
-				console.log(days, 'Days');
 				remainder = total % 86400000;
 				hours = Math.floor(remainder / 3600000);
-				console.log(hours, 'Hours');
 				remainder = remainder % 3600000;
 				minutes = Math.floor(remainder / 60000);
-				console.log(minutes, 'Minutes');
 				remainder = remainder % 60000;
 				seconds = Math.floor(remainder / 1000);
-				console.log(seconds, 'Seconds');
-				var formatted = days+" Days, "+hours+" Hours, "+minutes+" Minutes, "+seconds+" Seconds";	
+
+				// Money Calculation
+				money = 3.4 * days;
+				money = money.toFixed(2);
+
+				var formatted = days+" Days, "+hours+" Hours, "+minutes+" Minutes, "+seconds+" Seconds"+"   $"+money+" Saved";	
 				document.getElementById("clock").innerHTML = formatted;
 			</script>
 		</div>
