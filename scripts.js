@@ -14,7 +14,9 @@ seconds = Math.floor(remainder / 1000);
 
 // Money Calculation
 money = (3.2 * days)+(.13 * hours)+(.002 * minutes);
-money = money.toFixed(2);
+money = money.toFixed(2); // Always displays with two decimal places.
 
-var formatted = days+" Days, "+hours+" Hours, "+minutes+" Minutes, "+seconds+" Seconds ::"+"   $"+money+" Saved";	
-document.getElementById("clock").innerHTML = formatted;
+// Writing the entire output to a single string because i'm dumb
+// and this is what I've figured out so far.
+var formatted ="<------------ You Quit ------------>"+"\n"+days+" Days, "+hours+" Hours, "+minutes+" Minutes : "+"   $"+money+" Saved";	
+document.getElementById("clockContent").innerHTML = formatted;
