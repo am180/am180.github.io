@@ -13,8 +13,10 @@ remainder = remainder % 60000;
 seconds = Math.floor(remainder / 1000);
 
 // Money Calculation
-money = (3.2 * days)+(.13 * hours)+(.002 * minutes);
+money = (3.2 * days)+(.13 * hours)+(.002 * minutes); // Average pace of half pack a day @ $6.40 a pack
+money += 6.4*(days % 4); // Throws in a whole pack every 4 days to account for getting drunk and smoking a bunch
 money = money.toFixed(2); // Always displays with two decimal places.
+
 
 // Writing the entire output to a single string because i'm dumb
 // and this is what I've figured out so far.
